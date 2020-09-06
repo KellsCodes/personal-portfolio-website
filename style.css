@@ -1,0 +1,345 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    color: #000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+    /* colors */
+    --red: #cc3549;
+    --blue: #445c85;
+    --darkshade: #2a2e35;
+    --white: #e7e7e7;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+    color: var(--white);
+}
+
+
+ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    background: var(--red);
+    position: fixed;
+    width: 100%;
+    padding: 7px 0 7px 0;
+    z-index: 10;
+    top: 0;
+}
+
+#navbar ul {
+    float: right;
+    padding-right: 35px;
+    display: flex;
+}
+
+#navbar ul li {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+
+#navbar ul li a {
+    font-size: 1.5rem;
+    color: var(--white);
+    padding-top: 17px;
+    padding-bottom: 19px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#navbar ul li a:hover {
+    background: var(--blue);
+    text-decoration: none;
+}
+
+#main {
+    background: var(--blue);
+}
+
+#main #welcome-section {
+    width: 100%;
+    background: var(--darkshade);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main #welcome-section img {
+    width: 10%;
+    border-radius: 50%;
+}
+
+#main #welcome-section h1 {
+    color: var(--white);
+    font-size: 2.4rem;
+}
+
+#main #welcome-section h2 {
+    color: var(--white);
+}
+
+#main #welcome-section p {
+    color: var(--red);
+    margin-top: -12px;
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+
+#main #welcome-section ul li {
+color: var(--blue);
+font-size: 13px;
+line-height: 2;
+list-style-type: square;
+font-family: cursive;
+}
+
+#main #projects {
+    background: var(--blue);
+    margin-top: -20px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* border-bottom: 2px solid var(--red); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main #projects h2 {
+    color: var(--white);
+    font-size: 2.2rem;
+    position: relative;
+    top: 52px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+#main #project-tile {
+    display: flex;
+    justify-content: space-between;
+    width: 620px;
+    margin: auto;
+}
+
+#main #project-line {
+    width: 355px;
+    height: 1px;
+    background: var(--darkshade);
+    margin: auto;
+    margin-top: -26px;
+    margin-bottom: 26px;
+}
+
+#gallery {
+    width: 50%;
+    background-image: url(/personal_imgs/gallery/river.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.carousel {
+    width: 300px;
+    height: 50%;
+}
+
+#profile-links {
+    background: linear-gradient(70deg,#141c31 60%, #040915 100%);
+    padding-top: 15px;
+    height: 90vh;
+    color: var(--white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-links h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0px;
+}
+
+#profile-links p {
+    font-size: 1.5rem;
+}
+
+#profile-links #connects {
+    padding: 15px;
+}
+
+#profile-links #connects a {
+    color: var(--white);
+    margin: 1px;
+    font-size: 1.6rem;
+    padding: 10px;
+}
+
+#profile-links #connects a:hover {
+    animation-name: height;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+    text-decoration: none;
+}
+
+@keyframes height {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 10px;
+    }
+
+    100% {
+        top: 10px;
+    }
+}
+
+/* FOOTER section
+----------------------- */
+#footer-line {
+    height: 4px;
+    width: 100%;
+    background: var(--red);
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(70deg,#141c31 60%, #040915 100%);
+    padding: 25px;
+}
+
+
+#footer #note {
+    font-style: italic;
+    color: var(--white);
+    /* text-align: center; */
+}
+
+
+/* Javascript controlled elements for project display */
+.mystyle {
+    height: 250px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.mystyle img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.mystyle a {
+    color: var(--white);
+    padding: 7px;
+    background: var(--red);
+    width: 90px;
+    height: 50px;
+    border: 1px solid var(--darkshade);
+    border-radius: 2px;
+}
+.mystyle a:hover{
+    text-decoration: none;
+    color: var(--white);
+}
+
+#buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 160px;
+    height: 50px;
+    bottom: 15px;
+
+}
+
+#previous, #next {
+    background: var(--red);
+    border-color: var(--blue);
+    border-radius: 5px;
+    outline: none;
+    color: var(--white);
+    padding: 5px;
+    width: 75px;
+    border: 1px solid var(--darkshade);
+}
+
+/* responsiveness */
+@media(max-width: 600px){
+    #navbar {
+        width: 100vw;
+    }
+    #navbar ul {
+        float: left;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #navbar ul li {
+        margin: 3px;
+    }
+    
+    #navbar ul li a:hover {
+        background: none;
+    }
+
+    #main #welcome-section img {
+        width: 50%;
+    }
+    
+    #main #welcome-section h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #main #welcome-section p {
+        font-size: 17px;
+    }
+
+    #main #welcome-section ul li {
+        font-size: 15px;
+    }
+
+    #main #project-tile {
+        flex-direction: column;
+        width: calc(100vw - 10px);
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main #project-line {
+        width: 100%;
+        height: 2px;
+        background: var(--red);
+    }
+
+    #footer p {
+        text-align: center;
+    }
+}
