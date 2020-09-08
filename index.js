@@ -111,7 +111,7 @@ var myParent, myChild;
 function elements(array){
     for(let i = 0; i < array.length; ++i){
         myParent = new CreateParentElement();
-        myChild = new CreateElements(i, stateContainer[i].name, stateContainer[i].src, stateContainer[i].alt, stateContainer[i].imgUrl);
+        myChild = new CreateElements(i, array[i].name, array[i].src, array[i].alt, array[i].imgUrl);
     }
 }
 
@@ -143,8 +143,11 @@ document.getElementById('previous').addEventListener("click", function(){
 
         if(startPosition === 0){
             document.getElementById('previous').style.display = 'none';
+            // document.getElementById('next').style.float = 'right';
+            document.getElementById('next').style.marginLeft = '85px';
         }else if(startPosition !== 0){
-            document.getElementById('previous').style.display = 'block'
+            document.getElementById('previous').style.display = 'block';
+            document.getElementById('next').style.marginLeft = '0';
         }
 
         if(endPosition === maxNum){
@@ -171,8 +174,10 @@ document.getElementById('next').addEventListener("click", function(){
     // toggles the previous button on and off display on the screen
     if(startPosition === 0){
         document.getElementById('previous').style.display = 'none';
+        document.getElementById('next').style.marginLeft = '85px';
     }else if(startPosition !== 0){
-        document.getElementById('previous').style.display = 'block'
+        document.getElementById('previous').style.display = 'block';
+        document.getElementById('next').style.marginLeft = '0';
     }
     // toggles the next button on and off display on the screen
     if(endPosition === maxNum){
@@ -184,4 +189,4 @@ document.getElementById('next').addEventListener("click", function(){
     return;
 })
 
-window.addEventListener("load", elements(stateContainer)); //load the first project items on window load
+window.addEventListener("load", elements(stateContainer)); //loarray the first project items on window load
