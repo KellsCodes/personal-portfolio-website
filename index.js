@@ -189,4 +189,4 @@ document.getElementById('next').addEventListener("click", function(){
     return;
 })
 
-window.addEventListener("load", elements(stateContainer)); //loarray the first project items on window load
+window.addEventListener("load", elements(stateContainer)); //load and display the first project items on window load
